@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+{% block title %}首页 - 海南大学医药创新微专业{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero-home {
+        padding: 6rem 0;
+        background: linear-gradient(135deg, rgba(0,91,172,0.85) 0%, rgba(57,181,74,0.75) 100%), 
+                    url('/static/images/pic001.jpg') no-repeat center center;
+        background-size: cover;
+        color: white;
+    }
+    
+    .hero-title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .highlight-box {
+        font-size: 1.5rem;
+        font-weight: 500;
+        background-color: rgba(255,255,255,0.2);
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        border-radius: 30px;
+        backdrop-filter: blur(5px);
+        margin-bottom: 2rem;
+    }
+    
+    .hero-btn {
+        background-color: var(--accent);
+        color: white;
+        font-weight: 600;
+        padding: 0.8rem 2rem;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        border: 2px solid var(--accent);
+        font-size: 1.1rem;
+    }
+    
+    .hero-btn:hover {
+        background-color: transparent;
+        color: white;
+        border-color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    
+    .feature-box {
+        text-align: center;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+    
+    .feature-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    
+    .feature-icon {
+        height: 80px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        background-color: var(--light);
+        border-radius: 50%;
+        font-size: 2rem;
+        color: var(--primary);
+    }
+    
+    .image-feature {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+    
+    .image-feature img {
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+    
+    .image-feature:hover img {
+        transform: scale(1.05);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- 英雄区域 -->
+<section class="hero-home">
+    <div class="container text-center">
+        <h1 class="hero-title">医药创新与拔尖创业</h1>
+        <h2 class="hero-subtitle">交叉融合 · 实验驱动 · 精准培养</h2>
+        <div class="highlight-box">数据科学 × 生命科学</div>
+        <br>
+        <a href="#overview" class="btn hero-btn">
+            <i class="fas fa-arrow-down me-2"></i>了解更多
+        </a>
+    </div>
+</section>
+
+<!-- 主要概述 -->
+<section id="overview" class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="content-card">
+                    <h2 class="section-title text-center">欢迎加入微专业项目</h2>
+                    <div class="image-feature">
+                        <img src="{{ url_for('static', filename='images/pic001.jpg') }}" alt="医药创新项目" class="img-fluid">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <h4>前沿创新</h4>
+                                <p>接触医药领域最前沿的科学研究与技术创新</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h4>学科竞赛</h4>
+                                <p>通过高水平竞赛培养创新思维与团队协作能力</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4>创业实践</h4>
+                                <p>将创新成果转化为实际应用，培养创业能力</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 项目介绍 -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="image-feature mb-0">
+                    <img src="{{ url_for('static', filename='images/pic002.jpg') }}" alt="入门要求" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title">项目背景</h2>
+                <p>
+                    《医药创新与拔尖创业》微专业是由海南大学药学院、海南大学国际商学院、海南大学创新创业学院和海南大学科技园联手打造的实践育人平台，是经海南大学教务处批准设立的首批微专业之一，面向所有在校生招生。
+                </p>
+                <p>
+                    本专业以前沿创新为基础，学科竞赛为抓手，创新创业为目标，通过科研创新和实践创业的有机融合，培养一批懂技术、知金融、善管理、能营销的高水平复合型人才，孵化一批可落地转化、服务人民健康的创新项目与企业，加速自贸港的建设与发展。
+                </p>
+                <div class="mt-4">
+                    <a href="{{ url_for('main.registration') }}" class="btn signup-btn">
+                        <i class="fas fa-edit me-2"></i>立即报名
+                    </a>
+                    <span class="ms-3 text-muted">2025年春季首批招生</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 数据展示 -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">项目优势</h2>
+        <div class="row g-4">
+            <div class="col-md-3 col-6">
+                <div class="feature-box">
+                    <div class="h1 mb-3 text-primary fw-bold">7门</div>
+                    <p>专业核心课程</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="feature-box">
+                    <div class="h1 mb-3 text-primary fw-bold">3+</div>
+                    <p>一流高校联合教学</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="feature-box">
+                    <div class="h1 mb-3 text-primary fw-bold">10+</div>
+                    <p>国家级奖项</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="feature-box">
+                    <div class="h1 mb-3 text-primary fw-bold">60人</div>
+                    <p>首批招生名额</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 通知板块 -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">《医药创新与拔尖专业》微专业于2025年春季进行首批招生</h2>
+                <p class="lead mb-4">欢迎各位同学积极报名！</p>
+                <a href="{{ url_for('main.registration') }}" class="btn btn-primary btn-lg">
+                    查看报名详情
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

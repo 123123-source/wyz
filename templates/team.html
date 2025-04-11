@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block title %}教学团队 - 海南大学医药创新微专业{% endblock %}
+
+{% block extra_css %}
+<style>
+    .team-hero {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, rgba(0,91,172,0.9), rgba(0,117,217,0.85)),
+                    url('/static/images/campus-bg.jpg') no-repeat center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+    }
+
+    .team-section {
+        padding: 4rem 1rem;
+        background-color: #f7f9fc;
+    }
+
+    .team-card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 750px;
+    }
+
+    .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .team-photo {
+        height: 300px;
+        background-color: #eef1f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .team-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .team-content {
+        padding: 1.5rem;
+        text-align: left;
+        overflow: auto;
+    }
+
+    .team-content h3 {
+        margin-bottom: 0.75rem;
+        color: #003366;
+    }
+
+    .team-content p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 0.75rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="team-hero">
+    <div class="container">
+        <h1 class="display-5 fw-bold">教学团队</h1>
+        <p class="lead">《医药创新与拔尖创业》微专业开设的7门课程均由资深教师负责主讲</p>
+    </div>
+</section>
+
+<section class="team-section">
+    <div class="container">
+        <div class="row g-4">
+            <!-- 罗教授 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="/static/images/luo.jpg" alt="罗教授">
+                    </div>
+                    <div class="team-content">
+                        <h3>罗海彬 教授</h3>
+                        <p><strong>博士、海南大学二级教授、药学院院长，国家重大人才工程获得者（2021年）、全国五一劳动奖章获得者、政府特殊津贴专家（2023）、海南省B类人才（2021年）、国家重点研发计划首席科学家（2017年）、广东省珠江学者（2016 年）、中国化学会计算机化学专业委员会委员、广东药学会药物化学专业委员会副主委兼秘书长。</strong></p>
+                        <p>2021年11月荣获国际超算“戈登贝尔”提名奖（药学界首次入围该奖，戈登贝尔奖是国际上高性能计算应用领域的最高学术奖项），2019年荣获中国化学会青年计算化学家奖和2014年荣获中国药学会施维雅青年药物化学奖。2020年11月荣获民革中央的“抗击新冠肺炎疫情先进个人”称号和广东民革省委会的“抗击新冠肺炎疫情先进个人”称号。在Cell、Nat Sci Rev、PNAS、Acta Pharm Sin B、J Med Chem等国内外权威期刊发表150多篇论文；申请专利30多项；获批1项国家重点研发计划和6项国自然基金。多年来主要从事新药研发工作（包括药物设计、有机合成、药物筛选和靶标验证等），已创制新冠肺炎治疗药物双嘧达莫和2个临床前候选药物（已实现了成果转化）。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 王教授 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="/static/images/wang.jpg" alt="王教授">
+                    </div>
+                    <div class="team-content">
+                        <h3>王鑫 教授</h3>
+                        <p><strong>博士、山东省自然科学基金杰出基金（2023）、“戈登贝尔”提名奖（2021）、山东省泰山学者青年专家（2019）。</strong></p>
+                        <p>围绕病毒性疾病的临床需求，探索新靶点、新机制，开发新技术、新药。在Cell Host & Microbe、PNAS、Research等杂志发表论文50余篇，h-index 24，单篇被引用近2000次。主持和参与开发抗病毒药物多项：2项获批临床（抗乙肝、抗HPV），1项医疗器械上市（抗HPV），1项广谱抗冠状病毒海洋药物处于系统临床前阶段。转化新药1项，并完成首轮五千万元融资。开发新产品1项，辐射多个“一带一路”热带国家。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 张教授 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="/static/images/zhang.jpg" alt="张教授">
+                    </div>
+                    <div class="team-content">
+                        <h3>张磊 教授</h3>
+                        <p><strong>教育部首批万名优秀创新创业导师库入库专家、中国高校创新创业教育研究中心首批入库专家，兼任中国高等教育学会创新创业分会理事、四川省创新创业教育指导委员会委员、中国高等教育博览会“校企合作·双百计划”评审专家、中国“互联网+”等大赛评审委员会委员</strong></p>
+                        <p>主持的《创新创业实践》课程获评国家首批社会实践金课。排名第一累计指导学生获得中国“互联网+”大赛金奖2项、银奖5项、铜奖7项，其他省部级及以上奖项23项；被授予全国高校创新创业优秀指导教师荣誉称号。主要从事高校创新创业教育改革研究与实践、高校创新创业课程建设、中小企业运营与管理、企业投融资等方面的教学与科研。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

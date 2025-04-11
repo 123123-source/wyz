@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+{% block title %}专业介绍 - 海南大学医药创新微专业{% endblock %}
+
+{% block extra_css %}
+<style>
+    .project-hero {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, rgba(0,91,172,0.9) 0%, rgba(0,117,217,0.85) 100%), 
+                    url('/static/images/campus-bg.jpg') no-repeat center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+    }
+    
+    .feature-row {
+        position: relative;
+        z-index: 1;
+        margin-top: -60px;
+    }
+    
+    .feature-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        padding: 1.5rem;
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--light);
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .gallery-item {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+    }
+    
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+    
+    .stat-card {
+        background-color: var(--primary);
+        color: white;
+        border-radius: 10px;
+        padding: 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+    
+    .stat-text {
+        font-size: 1.1rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- 英雄区域 -->
+<section class="project-hero">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">医药创新与拔尖创业微专业</h1>
+        <p class="lead mb-4">打造跨学科、实践型、成果导向的复合型人才培养平台</p>
+    </div>
+</section>
+
+<!-- 特色卡片 -->
+<div class="container feature-row">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-crosshairs"></i>
+                </div>
+                <h4>聚焦前沿</h4>
+                <p>关注AI药学、未来药物与传统药物现代化发展方向</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h4>服务自贸港</h4>
+                <p>南药/黎药现代化、热带药用资源高值利用、智能化家庭医疗装置</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h4>科研成果落地</h4>
+                <p>涵盖药物注册申报、投资风险评估、市场营销等实用内容</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 项目概述 -->
+<section class="py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="section-title">微专业基本情况</h2>
+                <p>
+                    《医药创新与拔尖创业》微专业由海南大学药学院、国际商学院、创新创业学院与科技园联手打造，是首批经教务处批准设立的微专业之一，面向全体在校生开放。
+                </p>
+                <p>
+                    项目围绕科研、育人、成果转化一体化问题，强调"项目制"实践教学，聚焦国家战略与经济发展需求，鼓励学生在教师指导下开展高水平科研攻关与创新创业实践，形成"懂技术、知金融、善管理、能营销"的高水平复合型人才培养模式。
+                </p>
+                <div class="mt-4">
+                    <h5 class="mb-3 fw-bold">教学特色：</h5>
+                    <div class="d-flex mb-3">
+                        <div class="me-3 text-primary"><i class="fas fa-check-circle"></i></div>
+                        <div>聚焦生物医药发展前沿：AI in Pharmacy、未来药物、传统药物新发展</div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="me-3 text-primary"><i class="fas fa-check-circle"></i></div>
+                        <div>服务海南自贸港：南药/黎药现代化、热带药用资源高值利用、智能化家庭医疗装置</div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="me-3 text-primary"><i class="fas fa-check-circle"></i></div>
+                        <div>推动科研成果落地：涵盖药物注册申报、投资风险评估、市场营销等内容</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-4 mt-4 mt-lg-0">
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number">4亿+</div>
+                            <div class="stat-text">科研经费（近三年）</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-text">国家级奖项</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number">2项</div>
+                            <div class="stat-text">临床批件（2024年）</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-card">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-text">省部级奖项</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 建设基础 -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">微专业建设基础</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="content-card">
+                    <p>
+                        微专业依托药学院强大的科研资源与教学平台，与兄弟院校联合协作，构建交叉融合的培养体系。近三年，药学院科研经费超4亿元，建成先进药物研发平台；2024年获批2项临床批件、申报2项新原料、开发1项新产品。
+                    </p>
+                    <p>
+                        在各类高水平竞赛中，药学院师生团队表现突出，2023-2024年共获得国家级奖项10余项，省部级奖项近30项。
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="{{ url_for('static', filename='images/awards1.jpg') }}" alt="获奖情况1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="{{ url_for('static', filename='images/awards2.jpg') }}" alt="获奖情况2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 招生信息 -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">微专业招生时间：2025年春季学期</h2>
+                <p class="lead mb-4">欢迎全校同学踊跃报名加入！</p>
+                <a href="{{ url_for('main.registration') }}" class="btn signup-btn btn-lg">
+                    <i class="fas fa-edit me-2"></i>立即报名
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

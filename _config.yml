@@ -1,4 +1,19 @@
-title: "Flask-Jekyll Site"
-description: "A simple website using Flask and Jekyll"
-baseurl: ""
-url: "https://yourwebsite.com"
+import os
+
+# 项目根目录
+basedir = os.path.abspath(os.path.dirname(__file__))
+
+# Flask 配置
+DEBUG = True  # Render部署时可设为 False
+TESTING = False
+SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-key')  # 可自定义
+
+# FlatPages 配置（用于 Markdown 页面）
+FLATPAGES_EXTENSION = '.md'
+FLATPAGES_ROOT = 'app/pages'
+FLATPAGES_AUTO_RELOAD = True
+
+# Frozen-Flask 配置（用于静态站点构建）
+FREEZER_DESTINATION = 'build'  # 构建输出目录
+FREEZER_RELATIVE_URLS = True
+FREEZER_REMOVE_EXTRA_FILES = True
