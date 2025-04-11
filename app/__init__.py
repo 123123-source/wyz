@@ -4,6 +4,7 @@ from flask_flatpages import FlatPages
 from flask_frozen import Freezer
 from flask_bootstrap import Bootstrap
 from config import config
+from collections.abc import Mapping
 
 pages = FlatPages()
 freezer = Freezer()
