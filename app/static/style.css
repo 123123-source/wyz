@@ -1,0 +1,110 @@
+/* 海南大学微专业 - 主样式 */
+:root {
+  --hainanu-blue: #0066cc;
+  --hainanu-light: #e6f2ff;
+  --hainanu-dark: #003366;
+  --hainanu-accent: #ff9900;
+}
+
+body {
+  font-family: 'Microsoft YaHei', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--hainanu-blue), var(--hainanu-dark));
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.hero {
+  background: var(--hainanu-light);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+.image-container {
+  margin: 2rem 0;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.02);
+}
+
+.navbar {
+  background-color: var(--hainanu-dark);
+  padding: 1rem;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--hainanu-accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--hainanu-blue);
+  transform: translateY(-2px);
+}
+
+.footer {
+  background-color: var(--hainanu-dark);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
