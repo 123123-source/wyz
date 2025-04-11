@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask_flatpages import FlatPages
-from frozen_flask import Frozen
+from flask_frozen import Freezer
 from flask_bootstrap import Bootstrap
 from config import config
 from collections.abc import Mapping
